@@ -1,0 +1,29 @@
+\documentclass[../main.tex]{subfiles}
+
+Este capítulo reúne las conclusiones extraídas tras la realización del proyecto y describe
+posibles líneas futuras de trabajo que surgen a partir del mismo.
+
+\section{Conclusiones}
+Los objetivos propuestos en la Sección \ref{section:objetivos-intro} se han visto ampliamente satisfechos. En concreto, se ha plasmado una base común de clasificación para los sistemas de posicionamiento en interiores durante los Capítulos \ref{chapter:tecnicas} y \ref{chapter:tecnologias}. En todo momento ha estado presente hacer un ejercicio de abstracción para entender mejor el espectro de sistemas, y de esta forma, hacer una representación sencilla y fácilmente entendible del mismo. Como ya se ha explicado, el espectro se ha divido en tres sub-espectros ortogonales, métricas, algoritmos y tecnologías. Con el término ``ortogonal'' se quiere indicar que no existe solapamiento entre los sub-espectros y que una combinación de los tres da como resultado un sistema particular. \\
+En segundo lugar, un método comparativo ha sido expuesto durante el Capítulo \ref{chapter:comparativa} y parte del Capítulo \ref{chapter:estudio}. Durante esta parte del trabajo, ha sido necesario extraer una serie de propiedades intrínsecas a los sistemas, los cuales no se pueden entender sin un correcto análisis de las mismas. A partir de las características propias de los sistemas un modelo matemático ha sido formulado, que permite puntuar tales propiedades y así extraer el sistema más valorado. \\
+Por último, una solución al problema introducido durante las Secciones \ref{section:probmotiv-intro} y \ref{section:aplicacion} ha sido sugerida durante el Capítulo \ref{chapter:estudio}. Como se han mencionado en diversas ocasiones a lo largo de esta memoria, la solución recomendada en una simple aproximación a la solución real, pues simplemente se busca una introducción a la resolución del problema. Esta solución es obtenida mediante la comparativa previamente explicada y su elección es discutida durante el capítulo. Sobre la solución se ha aportado unos esquemas que proponen una arquitectura hardware y software. \\
+En resumen, las conclusiones sobre los objetivos enumerados en la Sección \ref{section:objetivos-intro} son:
+
+\begin{enumerate}
+    \item Se ha propuesto una representación y clasificación para los sistemas de posicionamiento en interiores durante los capítulos \ref{chapter:tecnicas} y \ref{chapter:tecnologias}.
+    \item Se ha desarrollado un método comparativo en el capítulo \ref{chapter:comparativa}.
+    \item Un sistema ha sido propuesto como solución a la aplicación seleccionada gracias a la comparativa desarrollada (cap. \ref{chapter:estudio}).
+\end{enumerate}
+
+\section{Líneas futuras}
+Este trabajo quiere sentar las bases en la selección de sistemas para aplicaciones que necesiten un posicionamiento en interiores. Un posible trabajo futuro será concretar y desarrollar la aproximación a la solución propuesta. No solo esta solución podría ser explorada, este estudio abre un abanico de soluciones posibles, tanto para la aplicación tratada como cualquier otra aplicación. \\
+Por otro lado, también se propone el desarrollo e investigación de nuevos sistemas, bien sea mediante nuevas métricas, algoritmos o tecnologías. Posiblemente la línea más viable será el estudio de nuevos algoritmos que propongan alternativas en el posicionamiento mediante el análisis del entorno (\emph{fingerprinting}). Esto abarca desde nuevos métodos probabilísticos a nuevos métodos en el tratamiento de imagen. \\
+
+En resumen, las potenciales líneas futuras de trabajo propuestas son:
+
+\begin{itemize}
+    \item Continuidad del proyecto y concretar la solución para la solución propuesta. Debe materializarse los esquemas de hardware y software propuestos, y comprobar, bien mediante simulación o pruebas reales, si los supuestos se corresponden con los resultados obtenidos.
+    \item Explorar y comparar las soluciones propuestas para la aplicación, pues varias alternativas fueron introducidas antes de seleccionar la utilizada en este trabajo.
+    \item Uso de la clasificación y comparativa en cualquier otra aplicación que necesite el posicionamiento en interiores. Esta línea de trabajo no se limita a desarrollos en el ámbito de la robótica.
+    \item Nuevos sistemas de posicionamiento. En concreto, nuevos algoritmos basados en el análisis de imagen.
+\end{itemize}

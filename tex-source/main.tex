@@ -1,0 +1,143 @@
+\documentclass[a4paper, 12pt]{memoir} %report
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} % dictionary
+\usepackage{subfiles} % organize code in different files
+\usepackage[a4paper, margin=2.5cm]{geometry} % page size and margins
+\usepackage{float} % positioning fibures and labels
+\usepackage{threeparttablex} % fancy tables with three parts, top, mid and bottom
+\usepackage{booktabs, caption, makecell}
+\usepackage{graphicx} % add figures
+\usepackage{subcaption} % add two subfigures at the same figure
+\graphicspath{ {figures/} } % path to figures
+\usepackage{amsmath} % math in latex
+\usepackage{marvosym} % euros symbol
+\usepackage{multirow} % multirow and multicolumn cells in tables
+\usepackage{longtable} % for 'longtable' environment
+\usepackage{pdflscape} % for 'landscape' environment
+\usepackage{hyperref} % add hyperlinks in the index
+\usepackage[acronym, toc, nonumberlist]{glossaries} % glossary and acronyms (toc to show in contents)
+\usepackage{libertine} % fancy title
+\usepackage{afterpage} % set big tables position
+
+\usepackage{fancyhdr} %for headers and footers
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[LE,RO]{\thepage} %for having the page number left in even and right in odd pages
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{ \nouppercase{\rightmark}}
+
+\providecommand{\keywords}[1]{\textbf{\textit{Palabras clave---}} #1} % Defining keywords
+
+%\renewcommand\thetable{\Alph{Tabla}}
+%\renewcommand{\thetable}{\Roman{table}}
+%\renewcommand\thefigure{S\roman{figure}}
+
+\renewcommand*\entryname{Name}
+\renewcommand*\descriptionname{Prueba}
+\setglossarystyle{superheader}
+
+\renewcommand*{\glsnamefont}[1]{\bfseries #1}
+
+\title{TFG}
+\author{pedro.arias }
+\date{September 2019}
+
+\input{glossary.tex} % Acronyms and symbols
+
+\begin{document}
+
+\renewcommand*\listtablename{Índice de tablas}
+\renewcommand\spanishtablename{Tabla}
+\renewcommand\theadfont{\bfseries}
+
+
+\frontmatter
+
+% \maketitle
+\input{title.tex}
+\cleardoublepage
+
+\begin{vplace}[0.7]
+    \begin{flushright}
+	    \textit{Aos meus pais,\\ que dedicaron a súa vida á miña educación.}
+    \end{flushright}
+\end{vplace}
+\cleardoublepage
+
+\addcontentsline{toc}{chapter}{Resumen}
+\subfile{chapters/abstrac}
+
+\chapter*{Agradecimientos}
+\addcontentsline{toc}{chapter}{Agradecimientos}
+\subfile{chapters/acknowledgments}
+\clearpage
+
+% Indice
+\tableofcontents
+\clearpage
+
+% Indices de figuras y tablas
+\listoffigures
+\clearpage
+\listoftables
+
+% Acronimos y simbolos
+\printglossary[type=\acronymtype, title=Acrónimos, toctitle=Acrónimos, style=superheader] %alttreehypergroup
+\cleardoublepage
+\printglossary[title=Símbolos, toctitle=Símbolos, style=superheader]
+\cleardoublepage
+
+\mainmatter
+
+\chapter{Introducción} \label{chapter:introduccion}
+\subfile{chapters/01-introduccion}
+\clearpage
+
+\chapter{Técnicas de posicionamiento en interiores} \label{chapter:tecnicas}
+\subfile{chapters/02-tecnicas}
+
+\chapter{Tecnologías para posicionamiento en interiores} \label{chapter:tecnologias}
+\subfile{chapters/03-tecnologias}
+\clearpage
+
+\chapter{Comparativa de sistemas} \label{chapter:comparativa}
+\subfile{chapters/04-comparacion}
+\clearpage
+
+\chapter{Caso de estudio} \label{chapter:estudio}
+\subfile{chapters/05-casoestudio}
+\clearpage
+
+\chapter{Conclusiones y líneas futuras} \label{chapter:conclusiones}
+\subfile{chapters/06-conclusiones}
+
+\glsaddall % show all acronyms and symbols
+
+% Referencias
+\bibliographystyle{plain} % named or plain
+\bibliography{refs} % "refs.bib" file
+
+\end{document}
+
+
+%%%% TO DO %%%%
+% 2. Abstrac en inglés -> NO
+% 7. Cambiar intro ->  remontarme a la necesidad de posicionar -> NO
+
+% 6. Unificar estilo referencias. REF cambiar por orden de aparicion
+
+% 1. Erratas menores
+% 2. Objetivos secundarios
+% 3. Mencionar que no esta claro que la hibridacion sea la mejor solucion
+% 5. Revisar tablas 4.1 -> Magnetica
+% 6. extender 1.1 con citas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% ESTRUCTURA %%%%
+% 1. Intro
+% 2. Estudio
+% 3. Analisis solucion
+% 4. Modelado
+% 5. Conclusión
